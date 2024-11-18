@@ -2,6 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+  }
+}
+
+@layer components {
+  .banzai,
+  .banzai-offset {
+    --red: theme(colors.red.600);
+    --red-size: max(7.5vh, 7.5vw);
+    --yellow: theme(colors.yellow.500);
+    --yellow-size: max(9vh, 9vw);
+    --size: 9deg;
+    --offset: 9deg;
+    --angle: 0deg;
+    animation: banzai 300s linear infinite;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+  }
+  .banzai {
+    background-image: radial-gradient(
+        circle at center,
+        var(--red) 0%,
+        var(--red) var(--red-size),
+        var(--yellow) var(--red-size),
+        var(--yellow) var(--yellow-size),
+        transparent var(--yellow-size)
+      ),
+      repeating-conic-gradient(
+        from var(--angle),
+        var(--red) 0deg,
+        var(--red) var(--size),
+        var(--yellow) var(--size),
+        var(--yellow) calc(var(--size) * 2)
+      );
+  }
+  .banzai-offset {
+    background-image: radial-gradient(
+        circle at center,
+        var(--red) 0%,
+        var(--red) var(--red-size),
+        var(--yellow) var(--red-size),
+        var(--yellow) var(--yellow-size),
+        transparent var(--yellow-size)
+      ),
+      repeating-conic-gradient(
+        from calc(var(--angle) - (var(--offset))),
+        var(--red) 0deg,
+        var(--red) var(--size),
+        var(--yellow) var(--size),
+        var(--yellow) calc(var(--size) * 2)
+      );
+  }
+
+  @keyframes banzai {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .banzai,
+    .banzai-offset {
+      --red: theme(colors.red.950);
+      --yellow: theme(colors.yellow.900);
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

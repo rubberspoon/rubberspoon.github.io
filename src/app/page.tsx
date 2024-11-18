@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="banzai grid grid-rows-[1fr] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="banzai grid grid-rows-[1fr] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-nunito-sans)]">
       <main className="flex flex-col gap-8 items-center">
-        <h1 className="banzai-offset bg-clip-text text-transparent [font-size:_clamp(1rem,12vw,9rem)] font-black">
+        <h1 className="banzai-offset bg-clip-text text-transparent [font-size:_clamp(1rem,12vw,9rem)] font-black font-[family-name:var(--font-nunito-sans-italic)]">
           rubberspoon
         </h1>
         <div className="max-w-xl mx-auto">

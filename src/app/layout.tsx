@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const NunitoSans = localFont({
+  src: "./fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf",
+  variable: "--font-nunito-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const NunitoSansItalic = localFont({
+  src: "./fonts/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf",
+  variable: "--font-nunito-sans-italic",
   weight: "100 900",
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${NunitoSans.variable} ${NunitoSansItalic.variable} antialiased`}
       >
         {children}
       </body>

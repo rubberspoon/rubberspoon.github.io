@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Appointments from "./components/appointments";
 
 export default function Home() {
   return (
     <div className="banzai grid grid-rows-[1fr] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-nunito-sans)]">
       <main className="flex flex-col gap-8 items-center">
-        <h1 className="banzai-offset bg-clip-text text-transparent [font-size:_clamp(1rem,12vw,9rem)] font-black font-[family-name:var(--font-nunito-sans-italic)]">
+        <h1 className="banzai-offset bg-clip-text text-transparent font-[family-name:var(--font-nunito-sans-italic)] [font-size:_clamp(1rem,12vw,9rem)] font-black tracking-tighter">
           rubberspoon
         </h1>
         <div className="max-w-xl mx-auto">
@@ -16,16 +17,7 @@ export default function Home() {
             priority
           />
         </div>
-        <a
-          className="banzai-offset rounded-full border border-solid border-transparent transition-colors flex items-center justify-center gap-2 [font-size:_clamp(.75rem,6vw,2rem)] leading-loose font-bold px-4 sm:px-5 sm:mx-auto"
-          href="https://calendar.app.google/THBeNE322ZRr29Cj8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="banzai bg-clip-text text-transparent">
-            Book a meeting
-          </span>
-        </a>
+        <Appointments />
       </main>
     </div>
   );

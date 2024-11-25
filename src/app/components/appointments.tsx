@@ -32,7 +32,7 @@ export default function Appointments() {
           >
             {/* <!-- Google Calendar Appointment Scheduling begin --> */}
             <iframe
-              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1DFMavpQaygKwoObTznPeY40NpsPvIM4Bict_Q-v_n659fWUrO9QoU1KSulGP1Z09pETnwBNO-?gv=true"
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2H9PkHfk92wJYx7QiM3O869hpg479XpDRygGG_xuKzRIC7F9NcygTei5B9HfRBoDk6s7eMkXZT?gv=true"
               width="100%"
               height="100%"
             ></iframe>

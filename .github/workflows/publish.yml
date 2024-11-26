@@ -1,6 +1,6 @@
-name: publish-to-github-pages
+name: Publish
 on:
-  push:
+  pull_request:
     branches:
       - master
 
